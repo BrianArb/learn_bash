@@ -76,7 +76,7 @@ create_epub: create_folder
 
 #  Create Kindle version (ignoring the error that it outputs)
 create_kindle: create_epub 
-	-if [ -d "${KINDLEGEN_PATH}" ]; then \
+	if [ -d "${KINDLEGEN_PATH}" ]; then \
 		${KINDLEGEN_PATH}/kindlegen ${KINDLEGEN_OPTS} ${DIR}/${BOOK}.epub; \
 	fi; \
 
